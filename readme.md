@@ -14,9 +14,9 @@ mkdir outputs
 mkdir pickles
 ```
 
-- The `documents` directory: where you put the json documents you want to work with.
-- The `outputs` directory: where any output will go.
-- The `pickles` directory is where the scripts will put and access pickled data that gets read into memory for some scripts.
+- `documents`: where you put the json documents you want to work with
+- `outputs`: where any output will go
+- `pickles`: where scripts put and access pickled document lists
 
 ## Document Server
 
