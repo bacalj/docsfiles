@@ -1,4 +1,4 @@
-## CLUE Document Utilities
+# CLUE Document Utilities
 
 This is a jupyter notebook intended to be a composable set of utilities for working with data derived from a set of CLUE documents.
 Everything in here is dependent on there being a collection of .json or .txt files in the `documents` directory.
@@ -17,25 +17,25 @@ The scripts here will use those directories by name.
 - The `outputs` directory is where the scripts will put their output.
 - The `pickles` directory is where the scripts will put and access pickled data that gets read into memory for some scripts.
 
-### Document Server
+## Document Server
 
-Serve documents from the `documents` directory.  This is useful if you want to use the CLUE document viewer to view documents, but don't want to run the entire CLUE stack.
+It makes sense to serve documents while working on these scripts.  That way you can check the structure of the json against what you see in the rendered document.  So start by opening the document linked below, and click the restart and run buttons.  Then you will get a link to a page that lists document links and json links together. Click on the document link to see the document rendered in the browser.  Click on the json link to see the json in the browser.
 
 [Serve Documents](serve_docs.ipynb)
 
-### Text Chunk Getter
+## Text Chunk Getter
 
 Extract human readable text chunks from all the text tiles in all the documents in the `documents` directory.
 
 [Get Text Chunks](get_text_chunks.ipynb)
 
-### Document Stastistics
+## Document Stastistics
 
 Get some basic statistics about the documents in the `documents` directory.
 
 [Document Statistics](document_statistics.ipynb)
 
-### Running this within a Google Workbench
+## Running this within a Google Workbench
 
 In the future there may be a usecase in which it is easiest to access documents stored in a GC Cloud Storage bucket and run these and other scripts in the Google Workbench environment.  The following is the code needed to get documents in hand in that context.
 
