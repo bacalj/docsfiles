@@ -4,7 +4,9 @@ This is a jupyter notebook intended to be a composable set of utilities for work
 Everything in here is dependent on there being a collection of .json or .txt files in the `documents` directory.
 The current best place to get these is by running the `download-documents.ts` script in the `clue` repository, and moving the resulting files into the `documents` directory.
 
-For this to work you'll need to create three directories in the root of this repository:
+## Setup
+
+Create three directories in the root of this repository.  The scripts here will use those directories by name. They are listed in the `.gitignore`.
 
 ```bash
 mkdir documents
@@ -12,32 +14,26 @@ mkdir outputs
 mkdir pickles
 ```
 
-The scripts here will use those directories by name.
-- The `documents` directory is where you should put the documents you want to work with.
-- The `outputs` directory is where the scripts will put their output.
+- The `documents` directory: where you put the json documents you want to work with.
+- The `outputs` directory: where any output will go.
 - The `pickles` directory is where the scripts will put and access pickled data that gets read into memory for some scripts.
 
 ## Document Server
 
-It makes sense to serve documents while working on these scripts.  That way you can check the structure of the json against what you see in the rendered document.  So start by opening the document linked below, and click the restart and run buttons.  Then you will get a link to a page that lists document links and json links together. Click on the document link to see the document rendered in the browser.  Click on the json link to see the json in the browser.
-
-[Serve Documents](serve_docs.ipynb)
+It makes sense to serve documents locally while working on these scripts.  That way you can refer to rendered and json representations of individual documents.  Start by clicking this link and running the cell there: [Serve Documents](serve_docs.ipynb)
 
 ## Text Chunk Getter
 
-Extract human readable text chunks from all the text tiles in all the documents in the `documents` directory.
-
-[Get Text Chunks](get_text_chunks.ipynb)
+Extract human readable text chunks from all the text tiles in all the documents in the `documents` directory: [Get Text Chunks](get_text_chunks.ipynb)
 
 ## Document Stastistics
 
-Get some basic statistics about the documents in the `documents` directory.
+Get some basic statistics about the documents in the `documents` directory: [Document Statistics](document_statistics.ipynb)
 
-[Document Statistics](document_statistics.ipynb)
+## Deployment ?
 
-## Running this within a Google Workbench
-
-In the future there may be a usecase in which it is easiest to access documents stored in a GC Cloud Storage bucket and run these and other scripts in the Google Workbench environment.  The following is the code needed to get documents in hand in that context.
+At the moment, this is designed to be run locally, but here is some code that will be useful if we want to run this in a Workbench AI (Google Cloud) notebook:
+The following is the boilerplate code needed to get documents into the project when the documents are stored in a Google Cloud bucket.
 
 ```python
 import os
