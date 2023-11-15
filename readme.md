@@ -30,10 +30,9 @@ Extract human readable text chunks from all the text tiles in all the documents 
 
 Get some basic statistics about the documents in the `documents` directory: [Document Statistics](document_statistics.ipynb)
 
-## Deployment ?
+## Use in Workbench AI
 
-At the moment, this is designed to be run locally, but here is some code that will be useful if we want to run this in a Workbench AI (Google Cloud) notebook:
-The following is the boilerplate code needed to get documents into the project when the documents are stored in a Google Cloud bucket.
+At the moment, this is designed to be run locally, but here is some code that will be useful if we want to run this in a Workbench AI (Google Cloud) notebook. It is the boilerplate needed to get documents stored in a Google Cloud bucket into the project.
 
 ```python
 import os
