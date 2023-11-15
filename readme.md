@@ -4,6 +4,19 @@ This is a jupyter notebook intended to be a composable set of utilities for work
 Everything in here is dependent on there being a collection of .json or .txt files in the `documents` directory.
 The current best place to get these is by running the `download-documents.ts` script in the `clue` repository, and moving the resulting files into the `documents` directory.
 
+For this to work you'll need to create three directories in the root of this repository:
+
+```bash
+mkdir documents
+mkdir outputs
+mkdir pickles
+```
+
+The scripts here will use those directories by name.
+- The `documents` directory is where you should put the documents you want to work with.
+- The `outputs` directory is where the scripts will put their output.
+- The `pickles` directory is where the scripts will put and access pickled data that gets read into memory for some scripts.
+
 ### Document Server
 
 Serve documents from the `documents` directory.  This is useful if you want to use the CLUE document viewer to view documents, but don't want to run the entire CLUE stack.
